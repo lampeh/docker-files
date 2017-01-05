@@ -1,1 +1,1 @@
-docker run --rm -t -i -v $(pwd):/build -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):$(which docker) ubuntu:14.04 /bin/bash -c ". /build/build-jail.sh $@"
+docker run --rm -t -i -v $(pwd):/build -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):$(which docker) ubuntu /bin/bash -c ". /build/build-jail.sh $@"

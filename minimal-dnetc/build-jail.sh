@@ -13,6 +13,9 @@ apt-get update || true
 apt-get -y dist-upgrade
 apt-get -y install makejail wget busybox
 
+# docker dependency
+apt-get -y install libltdl7
+
 useradd -m -U -s /bin/sh -d /home/dnetc dnetc
 
 cd $(mktemp -d)

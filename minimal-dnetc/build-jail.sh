@@ -1,13 +1,9 @@
 #!/bin/bash
 set -e
 
-REPO=lampe/minimal-dnetc
-TAG=latest
-EXTRA=
-
-#REPO=${3:-lampe/minimal-dnetc}
-#TAG=${1:-latest}
-#EXTRA=${2}
+REPO=${3:-lampe/minimal-dnetc}
+TAG=${1:-latest}
+EXTRA=${2}
 
 echo "Building image for $REPO:$TAG${EXTRA:+-$EXTRA}"
 

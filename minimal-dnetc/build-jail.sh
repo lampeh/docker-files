@@ -39,13 +39,13 @@ cat <<-_EOF_
 	forceCopy=["/home/dnetc/dnetc.ini","/etc/passwd","/etc/group"]
 _EOF_
 
-if [ "$EXTRA" = "busybox" ]; then
+#if [ "$EXTRA" = "busybox" ]; then
 	cat <<-_EOF_
 		packages=["busybox"]
 		#useDepends=1
 		doNotCopy=["/usr/share/doc", "/usr/share/info", "/usr/share/man", "/etc/fstab", "/etc/mtab", "/proc", "/usr/share/initramfs-tools"]
 	_EOF_
-fi
+#fi
 } >makejail.conf
 makejail makejail.conf
 
@@ -56,9 +56,9 @@ mkdir home/dnetc/buffers
 chown dnetc.dnetc home/dnetc/buffers
 
 # Link busybox
-if [ "$EXTRA" = "busybox" ]; then
+#if [ "$EXTRA" = "busybox" ]; then
 	ln -sf busybox bin/sh
-fi
+#fi
 
 imgId=`tar -c . | docker import -`
 echo "FROM image: $imgId"

@@ -1,1 +1,1 @@
-docker run --rm -v "$(pwd)":"/build" -v /var/run/docker.sock:/var/run/docker.sock -v "$(which docker)":"$(which docker)" ubuntu:xenial /bin/bash -c ". /build/build-jail.sh $@"
+docker run --security-opt seccomp:unconfined --rm -v "$(pwd)":"/build" -v /var/run/docker.sock:/var/run/docker.sock -v "$(which docker)":"$(which docker)" ubuntu:xenial /bin/bash -c ". /build/build-jail.sh $@"

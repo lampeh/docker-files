@@ -35,7 +35,8 @@ cat <<-_EOF_
 	processNames=["dnetc"]
 	users=["root","dnetc"]
 	groups=["root","dnetc"]
-	forceCopy=["/home/dnetc/dnetc.ini","/etc/passwd","/etc/group","/lib/x86_64-linux-gnu/libnss_dns*"]
+#	forceCopy=["/home/dnetc/dnetc.ini","/etc/passwd","/etc/group","/lib/x86_64-linux-gnu/libnss_dns*"]
+	forceCopy=["/home/dnetc/dnetc.ini","/etc/passwd","/etc/group"]
 _EOF_
 
 if [ "$EXTRA" = "busybox" ]; then
